@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39235FCC1BB0E53700548C15 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39235FC91BB0E53700548C15 /* ASValuePopUpView.m */; };
+		39235FCD1BB0E53700548C15 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 39235FCB1BB0E53700548C15 /* ASValueTrackingSlider.m */; };
 		392FDC401BAF364F0087AF96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 392FDC3F1BAF364F0087AF96 /* main.m */; };
 		392FDC431BAF364F0087AF96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 392FDC421BAF364F0087AF96 /* AppDelegate.m */; };
 		392FDC461BAF364F0087AF96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392FDC451BAF364F0087AF96 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39235FC81BB0E53700548C15 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASValuePopUpView.h; path = ../../ASValueTrackingSlider/ASValueTrackingSlider/ASValuePopUpView.h; sourceTree = "<group>"; };
+		39235FC91BB0E53700548C15 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASValuePopUpView.m; path = ../../ASValueTrackingSlider/ASValueTrackingSlider/ASValuePopUpView.m; sourceTree = "<group>"; };
+		39235FCA1BB0E53700548C15 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASValueTrackingSlider.h; path = ../../ASValueTrackingSlider/ASValueTrackingSlider/ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		39235FCB1BB0E53700548C15 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASValueTrackingSlider.m; path = ../../ASValueTrackingSlider/ASValueTrackingSlider/ASValueTrackingSlider.m; sourceTree = "<group>"; };
 		392FDC3A1BAF364F0087AF96 /* Tip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		392FDC3E1BAF364F0087AF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		392FDC3F1BAF364F0087AF96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		392FDC3C1BAF364F0087AF96 /* Tip */ = {
 			isa = PBXGroup;
 			children = (
+				39235FC81BB0E53700548C15 /* ASValuePopUpView.h */,
+				39235FC91BB0E53700548C15 /* ASValuePopUpView.m */,
+				39235FCA1BB0E53700548C15 /* ASValueTrackingSlider.h */,
+				39235FCB1BB0E53700548C15 /* ASValueTrackingSlider.m */,
 				392FDC411BAF364F0087AF96 /* AppDelegate.h */,
 				392FDC421BAF364F0087AF96 /* AppDelegate.m */,
 				392FDC441BAF364F0087AF96 /* ViewController.h */,
@@ -220,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				392FDC461BAF364F0087AF96 /* ViewController.m in Sources */,
+				39235FCC1BB0E53700548C15 /* ASValuePopUpView.m in Sources */,
+				39235FCD1BB0E53700548C15 /* ASValueTrackingSlider.m in Sources */,
 				392FDC431BAF364F0087AF96 /* AppDelegate.m in Sources */,
 				392FDC401BAF364F0087AF96 /* main.m in Sources */,
 			);
@@ -418,6 +430,7 @@
 				392FDC5F1BAF364F0087AF96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		392FDC601BAF364F0087AF96 /* Build configuration list for PBXNativeTarget "TipTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				392FDC621BAF364F0087AF96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
