@@ -21,11 +21,14 @@
 
 @implementation ViewController
 
-
--(float)getTipPercent {
-    return roundf(self.tipSlider.value) / 100;
+- (IBAction)billAmountChanged {
+    [self updateValues];
 }
 
+- (IBAction)tipChanged:(id)sender {
+    [self updateValues];
+    
+}
 
 
 -(void)updateValues {
@@ -37,10 +40,11 @@
     self.totalLabel.text = [NSString stringWithFormat:@"%.02f", (1 + tipPercent) * billAmount];
 }
 
-- (IBAction)tipChanged:(id)sender {
-    [self updateValues];
-
+-(float)getTipPercent {
+    return roundf(self.tipSlider.value) / 100;
 }
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

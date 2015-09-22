@@ -29,6 +29,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="billAmount:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Opa-Lo-fFf"/>
+                                    <action selector="billAmountChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="UAH-UA-YXf"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip Amount:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL1-Tr-05A">
