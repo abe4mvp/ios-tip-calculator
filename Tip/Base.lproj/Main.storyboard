@@ -23,12 +23,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10.00" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgw-w1-vhb">
-                                <rect key="frame" x="483" y="86" width="57" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgw-w1-vhb">
+                                <rect key="frame" x="482" y="86" width="58" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="billAmount:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Opa-Lo-fFf"/>
                                     <action selector="billAmountChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="UAH-UA-YXf"/>
                                 </connections>
                             </textField>
@@ -59,9 +58,21 @@
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="lu3-hk-u71" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="56" y="317" width="489" height="31"/>
                                 <connections>
-                                    <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4V5-jd-Dxn"/>
+                                    <action selector="tipChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="sRM-9e-GMd"/>
                                 </connections>
                             </slider>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uz0-Oc-imL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="How was your service?" id="B3g-Em-iMc">
+                                        <barButtonItem key="leftBarButtonItem" title="Save Default" id="NXS-dF-sKu">
+                                            <connections>
+                                                <action selector="saveDefaultPressed:" destination="BYZ-38-t0r" id="brJ-96-Akh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.46286003114339513" green="1" blue="0.075421200548303258" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,6 +81,7 @@
                             <constraint firstItem="nNW-Ve-6NP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="7FU-Qb-nO1"/>
                             <constraint firstItem="nNW-Ve-6NP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="ACZ-3Q-3W7"/>
                             <constraint firstItem="lu3-hk-u71" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="297" id="CST-HU-EyF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uz0-Oc-imL" secondAttribute="trailing" constant="-16" id="D1i-FO-s7w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zHh-t8-eDN" secondAttribute="trailing" constant="44" id="E6j-DG-b9j"/>
                             <constraint firstItem="XL1-Tr-05A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="RYj-63-1bp"/>
                             <constraint firstItem="u8I-A0-MMS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="bAV-xg-N26"/>
@@ -90,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="-124"/>
+            <point key="canvasLocation" x="203" y="-35"/>
         </scene>
     </scenes>
 </document>
