@@ -6,7 +6,10 @@ A tip Calculator
 
 ### Features
 
-* silder adjusts tip value
+* Use Slilder to adjusts tip percentage
+* Default tip percentage persists after app restart
+* App opens to field for bill amount so you can start typing right away
+* 
 
 ### credits
 
