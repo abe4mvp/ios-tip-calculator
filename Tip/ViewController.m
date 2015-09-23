@@ -39,9 +39,15 @@
     float tipPercent = [self getTipPercent];
     float billAmount = [self.billTextField.text floatValue];
     
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [formatter setLocale:[NSLocale currentLocale]];
     
-    self.tipLabel.text = [NSString stringWithFormat:@"$ %.02f", tipPercent * billAmount];
-    self.totalLabel.text = [NSString stringWithFormat:@"= $ %.02f", (1 + tipPercent) * billAmount];
+    
+    
+    
+    self.tipLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: tipPercent * billAmount]];
+    self.totalLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: (1 + tipPercent) * billAmount]];
     self.tipPercentLabel.text = [NSString stringWithFormat:@"+ %2.f percent tip", tipPercent * 100];
 }
 
