@@ -17,18 +17,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
 @property (weak, nonatomic) IBOutlet UILabel *tipPercentLabel;
 
-
 @end
 
 @implementation ViewController
 
 - (IBAction)billAmountChanged {
     [self updateValues];
+    [self setDefaultBill];
 }
 
 - (IBAction)tipChanged {
     [self updateValues];
-    
 }
 
 - (IBAction)saveDefaultPressed:(id)sender {
@@ -42,9 +41,6 @@
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     [formatter setLocale:[NSLocale currentLocale]];
-    
-    
-    
     
     self.tipLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: tipPercent * billAmount]];
     self.totalLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: (1 + tipPercent) * billAmount]];
@@ -70,13 +66,37 @@
         return 15.0;
     }
 }
+- (void)setDefaultBill {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject: self.billTextField.text forKey: @"defaultBill"];
+    [defaults setObject: [NSDate date] forKey: @"billEnteredTime"];
+}
 
+- (float)getDefaultBill {
+    return [[NSUserDefaults standardUserDefaults] floatForKey: @"defaultBill"];
+}
+
+
+- (BOOL)isDefaultBillValid {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults objectForKey:@"defaultBill"] != nil) {
+        NSDate *billEneteredTime = [defaults objectForKey: @"billEnteredTime"];
+        NSTimeInterval timeSinceBillEnetered = fabs([billEneteredTime timeIntervalSinceNow]);
+        if (timeSinceBillEnetered < 60 * 10) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
 
 
 - (void)setTipToDefault {
     self.tipSlider.value = [self getDefaultTip];
 }
-
 
 
 - (void)viewDidLoad {
@@ -86,8 +106,12 @@
     self.tipSlider.value = [self getDefaultTip];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [self.billTextField becomeFirstResponder];
+    if ([self isDefaultBillValid]) {
+        self.billTextField.text = [NSString stringWithFormat: @"%.02f", [self getDefaultBill]];
+    }
+    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning {
