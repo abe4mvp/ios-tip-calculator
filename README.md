@@ -9,7 +9,8 @@ A tip Calculator
 * Use Slilder to adjusts tip percentage
 * Default tip percentage persists after app restart
 * App opens to field for bill amount so you can start typing right away
-* 
+* Remember the amount of your bill for 10 minutes across app restarts
+* Locale based Currency sign and decimal seperator
 
 ### credits
 
