@@ -5,12 +5,14 @@
 A tip Calculator
 
 ### Features
-
-* Use Slilder to adjusts tip percentage
-* Default tip percentage persists after app restart
+* Paying cash? automaticaly adjust your tip to round the total bill up to the nearest dollar and avoid change.
+* Use animated Slilder to adjusts tip percentage
+* Save your Default tip percentage and see it again even after app restart
 * App opens to field for bill amount so you can start typing right away
-* Remember the amount of your bill for 10 minutes across app restarts
+* Keyboard always open for easy access
+* Remember the amount of your bill amount for 10 minutes even across app restarts
 * Locale based Currency sign and decimal seperator
+
 
 ### credits
 
