@@ -55,8 +55,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uz0-Oc-imL">
-                                <rect key="frame" x="0.0" y="6" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uz0-Oc-imL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Tip Calculator" id="B3g-Em-iMc">
                                         <barButtonItem key="leftBarButtonItem" title="Set Default" id="NXS-dF-sKu">
@@ -81,14 +81,14 @@
                             <constraint firstItem="nNW-Ve-6NP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="ACZ-3Q-3W7"/>
                             <constraint firstItem="lu3-hk-u71" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="297" id="CST-HU-EyF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zHh-t8-eDN" secondAttribute="trailing" constant="44" id="E6j-DG-b9j"/>
-                            <constraint firstItem="uz0-Oc-imL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HC6-6R-jwk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uz0-Oc-imL" secondAttribute="trailing" constant="-16" id="Nfw-bk-sSp"/>
                             <constraint firstItem="ezQ-do-mZT" firstAttribute="top" secondItem="nNW-Ve-6NP" secondAttribute="bottom" constant="18" id="Zjq-MY-stG"/>
                             <constraint firstItem="lu3-hk-u71" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="cCh-BF-BSi"/>
+                            <constraint firstItem="uz0-Oc-imL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dBX-FP-lgU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lu3-hk-u71" secondAttribute="trailing" constant="44" id="iot-ld-Qpn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2bZ-aM-4Yr" secondAttribute="trailing" constant="44" id="jHu-jq-sXl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fgw-w1-vhb" secondAttribute="trailing" constant="44" id="lET-a3-yD6"/>
                             <constraint firstItem="zHh-t8-eDN" firstAttribute="top" secondItem="fgw-w1-vhb" secondAttribute="bottom" constant="13" id="qax-gr-Wi7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uz0-Oc-imL" secondAttribute="trailing" id="yhF-sd-I1N"/>
                             <constraint firstItem="ezQ-do-mZT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="z2Y-r8-fMs"/>
                         </constraints>
                     </view>

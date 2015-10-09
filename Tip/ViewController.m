@@ -132,7 +132,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.tipSlider setMaxFractionDigitsDisplayed:0];
     self.tipSlider.value = [self getDefaultTip];
-    [self updateValues];
+    
 
     
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
@@ -146,6 +146,7 @@
     if ([self isDefaultBillValid]) {
         self.billTextField.text = [NSString stringWithFormat: @"%.02f", [self getDefaultBill]];
     }
+    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning {
