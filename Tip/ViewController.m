@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "ASValueTrackingSlider.h"
+#import "SettingsViewController.h"
+
 
 @interface ViewController ()
 
@@ -37,14 +39,29 @@
 - (void)updateValues {
     float tipPercent = [self getTipPercent];
     float billAmount = [self.billTextField.text floatValue];
+    float total = (1.0 + tipPercent) * billAmount;
+    float tip;
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setMaximumFractionDigits:2];
+    [formatter setRoundingMode: NSNumberFormatterRoundDown];
     
-    self.tipLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: tipPercent * billAmount]];
-    self.totalLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: (1 + tipPercent) * billAmount]];
     self.tipPercentLabel.text = [NSString stringWithFormat:@"+ %2.f percent tip", tipPercent * 100];
+    
+    if ([self roundUpToNearestDollar]) {
+        NSLog(@"rounding");
+        total = ceilf(total);
+        tip = total -  billAmount;
+        
+    } else {
+        NSLog(@"not rounding");
+        tip = tipPercent * billAmount;
+    }
+    
+    self.tipLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: tip]];
+    self.totalLabel.text = [formatter stringFromNumber: [NSNumber numberWithFloat: total]];
 }
 
 - (float)getTipPercent {
@@ -93,25 +110,45 @@
     }
 }
 
+- (bool) roundUpToNearestDollar {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog([defaults boolForKey:@"roundUpToNearestDollar"] ? @"true X" : @"false X");
+    
+    if ([defaults objectForKey:@"roundUpToNearestDollar"] == nil) {
+        return false;
+    } else {
+        return [defaults boolForKey: @"roundUpToNearestDollar"];
+    }
+}
+
 
 - (void)setTipToDefault {
     self.tipSlider.value = [self getDefaultTip];
 }
 
+- (IBAction)onSettingsButton:(id)sender {
+    [self presentViewController:[[SettingsViewController alloc] init] animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.tipSlider setMaxFractionDigitsDisplayed:0];
     self.tipSlider.value = [self getDefaultTip];
+    [self updateValues];
+
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
+
+
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.billTextField becomeFirstResponder];
     if ([self isDefaultBillValid]) {
         self.billTextField.text = [NSString stringWithFormat: @"%.02f", [self getDefaultBill]];
     }
-    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,6 +16,8 @@
 		392FDC4B1BAF364F0087AF96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 392FDC4A1BAF364F0087AF96 /* Images.xcassets */; };
 		392FDC4E1BAF364F0087AF96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392FDC4C1BAF364F0087AF96 /* LaunchScreen.xib */; };
 		392FDC5A1BAF364F0087AF96 /* TipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 392FDC591BAF364F0087AF96 /* TipTests.m */; };
+		39EC35711BB853D400047951 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EC356F1BB853D400047951 /* SettingsViewController.m */; };
+		39EC35721BB853D400047951 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39EC35701BB853D400047951 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		392FDC531BAF364F0087AF96 /* TipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		392FDC581BAF364F0087AF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		392FDC591BAF364F0087AF96 /* TipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipTests.m; sourceTree = "<group>"; };
+		39EC356E1BB853D400047951 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		39EC356F1BB853D400047951 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		39EC35701BB853D400047951 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,9 @@
 				392FDC441BAF364F0087AF96 /* ViewController.h */,
 				392FDC451BAF364F0087AF96 /* ViewController.m */,
 				392FDC471BAF364F0087AF96 /* Main.storyboard */,
+				39EC356E1BB853D400047951 /* SettingsViewController.h */,
+				39EC356F1BB853D400047951 /* SettingsViewController.m */,
+				39EC35701BB853D400047951 /* SettingsViewController.xib */,
 				392FDC4A1BAF364F0087AF96 /* Images.xcassets */,
 				392FDC4C1BAF364F0087AF96 /* LaunchScreen.xib */,
 				392FDC3D1BAF364F0087AF96 /* Supporting Files */,
@@ -212,6 +220,7 @@
 				392FDC491BAF364F0087AF96 /* Main.storyboard in Resources */,
 				392FDC4E1BAF364F0087AF96 /* LaunchScreen.xib in Resources */,
 				392FDC4B1BAF364F0087AF96 /* Images.xcassets in Resources */,
+				39EC35721BB853D400047951 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +241,7 @@
 				392FDC461BAF364F0087AF96 /* ViewController.m in Sources */,
 				39235FCC1BB0E53700548C15 /* ASValuePopUpView.m in Sources */,
 				39235FCD1BB0E53700548C15 /* ASValueTrackingSlider.m in Sources */,
+				39EC35711BB853D400047951 /* SettingsViewController.m in Sources */,
 				392FDC431BAF364F0087AF96 /* AppDelegate.m in Sources */,
 				392FDC401BAF364F0087AF96 /* main.m in Sources */,
 			);

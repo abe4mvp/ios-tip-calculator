@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
+            <connections>
+                <outlet property="roundUpSwitch" destination="EkY-bY-1eS" id="7La-yA-eGM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-bY-1eS">
+                    <rect key="frame" x="483" y="137" width="51" height="31"/>
+                    <connections>
+                        <action selector="roundUpSwitchChanged:" destination="-1" eventType="valueChanged" id="yIu-ep-6hV"/>
+                    </connections>
+                </switch>
+                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDJ-Ni-dWk">
+                    <rect key="frame" x="0.0" y="8" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Settings" id="6d5-cP-fPp">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="nVE-qE-0IK">
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="-1" id="KVl-Rv-NgU"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Round up to nearest dollar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSR-Wu-zd8">
+                    <rect key="frame" x="54" y="142" width="204" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bSR-Wu-zd8" firstAttribute="top" secondItem="fDJ-Ni-dWk" secondAttribute="bottom" constant="90" id="3cY-4k-F7x"/>
+                <constraint firstItem="EkY-bY-1eS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="137" id="Wzi-my-dor"/>
+                <constraint firstAttribute="trailing" secondItem="EkY-bY-1eS" secondAttribute="trailing" constant="68" id="Z8l-1j-B7o"/>
+                <constraint firstItem="bSR-Wu-zd8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="54" id="orK-0X-OzD"/>
+            </constraints>
+            <point key="canvasLocation" x="-9" y="161"/>
+        </view>
+    </objects>
+</document>
