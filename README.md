@@ -14,6 +14,10 @@ A tip Calculator
 * Locale based Currency sign and decimal seperator
 
 
+<br>
+![Demo](./tip_calculator.gif)
+
+
 ### credits
 
 Style for slider from  [ASValueTrackingSlider](https://github.com/alskipp/ASValueTrackingSlider)
