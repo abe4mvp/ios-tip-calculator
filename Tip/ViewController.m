@@ -51,12 +51,10 @@
     self.tipPercentLabel.text = [NSString stringWithFormat:@"+ %2.f percent tip", tipPercent * 100];
     
     if ([self roundUpToNearestDollar]) {
-        NSLog(@"rounding");
         total = ceilf(total);
         tip = total -  billAmount;
         
     } else {
-        NSLog(@"not rounding");
         tip = tipPercent * billAmount;
     }
     
@@ -112,7 +110,6 @@
 
 - (bool) roundUpToNearestDollar {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog([defaults boolForKey:@"roundUpToNearestDollar"] ? @"true X" : @"false X");
     
     if ([defaults objectForKey:@"roundUpToNearestDollar"] == nil) {
         return false;
